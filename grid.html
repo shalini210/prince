@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            display: grid;
+            grid-template-columns: 30% 30% 30% ;
+            /* gap: 10px;
+             */
+             justify-content: space-evenly;
+             row-gap: 20px;
+        }
+        .container>div
+        {
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background-color: rgb(230, 214, 214);
+            padding-top:25px;
+            padding-bottom:25px;
+            text-align: center;
+            
+        }
+        .container>div>img
+        {
+            width:40%;
+         
+            
+        }
+        .heading{
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .heading:hover{
+            color:blueviolet
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+        <img src="images/s1.png" alt="" srcset="">    
+        <div class="heading">Currency Wallet</div>
+        <div>fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using</div>
+        </div> 
+        <div>
+            <img src="images/s1.png" alt="" srcset="">    
+            <div class="heading">Currency Wallet</div>
+            <div>fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using</div>
+            </div> 
+            <div>
+                <img src="images/s1.png" alt="" srcset="">    
+                <div class="heading">Currency Wallet</div>
+                <div>fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using</div>
+                </div> 
+
+    </div>
+</body>
+</html>
