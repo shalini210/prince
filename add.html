@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function addfun()
+        {
+            var a = document.getElementById("txta").value;
+            var b = document.getElementById("txtb").value;
+            var c = parseInt(a)+parseInt(b);
+            //'1'+'1' ="11"
+            //parseInt('1')
+            //1
+
+            // alert("sum is "+c);
+            document.getElementById("hresult").innerHTML="sum is "+ c;
+        }
+    </script>
+</head>
+<body>
+    <p>
+        ENter a : <input type="text" id="txta">
+    </p>  
+    <p>
+        ENter b : <input type="text" id="txtb">
+    </p>
+    <input type="button" value="+" onclick="addfun()">
+    <input type="button" value="-" onclick="addfun()">
+    <input type="button" value="/" onclick="addfun()">
+    <input type="button" value="* " onclick="addfun()">
+<h2 id="hresult"></h2>
+</body>
+</html>

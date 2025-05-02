@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function getBill()
+        {
+            var name = document.getElementById("txtname").value;
+            var txtunits = document.getElementById("txtunits")
+            var units = parseInt(txtunits.value)
+            var hbill = document.getElementById("hbill")
+            var bill = 0 ;
+            var msg = "";
+            var cname = "red"
+            if(units<=50)
+            {
+                bill = units* 5;
+                cname="green"
+                msg = `welcome ${name} your bill for ${units}  units is calculated @ 5 is ${bill}rs `
+            }
+            else
+            {
+                bill = units* 7;
+                msg = `welcome ${name} your bill for ${units} units is calculated @ 7 is ${bill}rs `
+            }
+            hbill.innerHTML = msg;
+            hbill.style.backgroundColor=cname
+            txtunits.value=""
+            txtunits.focus()
+        }
+    </script>
+</head>
+<body>
+    <p>Enter name : <input type="text" id="txtname"></p>
+    <p>Enter units : <input type="text" id="txtunits"></p>
+    <input type="button" value="Get Bill" onclick="getBill()">
+    <h1 id="hbill">
+    </h1>
+    
+</body>
+</html>
