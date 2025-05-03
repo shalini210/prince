@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+       function checkSenior() 
+       {
+var txtname = document.getElementById("txtname")
+var txtage = document.getElementById("txtage")
+var presult = document.getElementById("presult")
+
+var age = parseInt(txtage.value);
+// alert()
+let msg = "welcome "+txtname.value +" you are not a senior citizen"
+let color = "orange"
+if(txtname.value=="")
+{
+    msg = "please enter name "
+    txtname.focus()
+    txtname.style.outlineColor = "red"
+    color="red"
+}
+else if(isNaN(age)||age<0 ||age>120 )
+{
+    msg = "invalid age"
+    color="red"
+    txtage.value=""
+    txtage.focus()
+}
+else
+{
+    if(age>=60 )
+    {
+        let msg = "welcome "+txtname.value +" you are  a senior citizen"
+        color="yellowgreen "
+    }
+    txtname.focus()
+}
+presult.innerHTML=msg
+presult.style.color=color
+// txtage.style.outlineColor="red"
+// txtage.style.borderColor="red"
+       }
+       function resetoutline()
+       {
+
+       }
+    </script>
+</head>
+<body>
+    <p>name : <input type="text" id="txtname" onblur="resetoutline()"></p>
+    <p>age : <input type="text" id="txtage"></p>
+    <input type="button" value="Check" onclick="checkSenior()">
+    <p id="presult"></p>
+</body>
+</html>
