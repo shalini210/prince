@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div
+        {
+            height:200px;
+            width:200px;
+            background-color: yellow;
+            
+            border-radius: 50%;
+            border-bottom-left-radius: 0%;
+            transform: rotate(315deg);
+            
+        }
+        .red
+        {
+            background-color: rgb(174, 46, 15);
+        }
+        .blue
+        {
+            background-color: skyblue;
+        }
+        body{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+<script>
+    
+    function changeColor(ele){    
+            // ele.style.backgroundColor="white";    
+            // ele.style.display = "none"
+            ele.style.visibility="hidden"
+            
+    }
+</script>
+</head>
+<body>
+    <div onclick="changeColor(this)" id="d1">
+    </div>
+    
+    <div onclick="changeColor(this)" class="red">
+    </div>
+    <div onclick="changeColor(this)">
+    </div>
+    <div onclick="changeColor(this)" class="blue">
+    </div>
+    
+    <div onclick="changeColor(this)" id="d1">
+    </div>
+    
+    <div onclick="changeColor(this)" class="red">
+    </div>
+    <div onclick="changeColor(this)">
+    </div>
+    <div onclick="changeColor(this)" class="blue">
+    </div>
+</body>
+</html>
