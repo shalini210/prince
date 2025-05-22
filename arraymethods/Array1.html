@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+           var cars =[]
+           function showCars()
+           {
+            var data = document.getElementById("data")
+            data.innerHTML="";
+            for(var i =0 ;i<cars.length;i++)
+            {
+             data.innerHTML+= `<p> ${cars[i]}</p>`
+            }
+           }
+        function addCar()
+        {
+            var txtcar = document.getElementById("txtcar")
+         
+            cars.push(txtcar.value)
+            txtcar.value=""
+            txtcar.focus()
+           showCars()
+
+        }
+        function Removecar()
+        {
+            cars.pop()
+            showCars()
+         
+        }
+    </script>
+</head>
+<body>
+    <p>Enter car name : <input type="text" id="txtcar"> 
+        <input type="button" value="Add" onclick="addCar()"> 
+        <input type="button" value="Remove" onclick="Removecar()" /></p>
+
+        <div id="data">
+
+        </div>
+    
+</body>
+</html>

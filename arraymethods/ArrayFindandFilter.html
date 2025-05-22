@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let fruits = ["orange","kiwi","papaya","Apple"];
+        function findfruit()
+        {
+            var txtfruit = document.getElementById("txtfruit");
+            var hresult = document.getElementById("hresult");
+            var fruit = txtfruit.value;
+                let index = fruits.findIndex((f)=>f===fruit)                
+                if(index < 0)
+                {
+                    hresult.innerHTML = "fruit not found"
+                }
+                else
+                {
+                    hresult.innerHTML = "fruit found at index "+ index 
+                }
+        //     let f = fruits.find((f)=>f===fruit)
+        //     if(f!=undefined)
+        // {
+        //     hresult.innerHTML="Fruit Found"
+        // }
+        // else
+        // {
+        //     hresult.innerHTML= "fruit not found"
+        // }
+        }
+    </script>
+</head>
+<body>
+    <p>
+        Enter fruit name : <input type="text"
+         id="txtfruit">
+         <input type="button" value="Find" onclick="findfruit()">
+    </p>
+    <h1 id="hresult"></h1>
+</body>
+</html>

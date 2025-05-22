@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div
+        @keyframes flyballon {
+            0%{margin-top:80dvh;visibility:visible}
+            100%{margin-top:1dvh;display: none;}
+        }
+        .ballon
         {
-            height:200px;
-            width:200px;
+            height:100px;
+            width:100px;
             background-color: yellow;
-            
+            animation: flyballon 5s  linear;
             border-radius: 50%;
             border-bottom-left-radius: 0%;
             transform: rotate(315deg);
-            
+            visibility: hidden;
         }
         .red
         {
@@ -24,7 +28,7 @@
         {
             background-color: skyblue;
         }
-        body{
+        #container{
             display: flex;
             flex-wrap: wrap;
         }
@@ -37,27 +41,34 @@
             ele.style.visibility="hidden"
             
     }
+    function createBallons()
+    {
+        var container = document.getElementById("container")
+        
+for(var i =0 ;i<=10;i++)
+{
+    let colorclass = "red"
+    if((i%3)==1) 
+    {colorclass="yellow"
+    }
+    else if((i%3)==2){ colorclass="blue";}
+
+    let tempdiv = document.createElement("div")
+        tempdiv.className = `ballon ${colorclass}`
+        let num = Math.round((Math.random())*10)
+        tempdiv.style.animationDelay=num+"s"
+        container.appendChild(tempdiv)
+}
+        // <div onclick="changeColor(this)" id="d1">
+        // </div>
+
+    }
 </script>
 </head>
-<body>
-    <div onclick="changeColor(this)" id="d1">
-    </div>
+<body onload="createBallons()">
+    <div id="container">
+            
+</div>
     
-    <div onclick="changeColor(this)" class="red">
-    </div>
-    <div onclick="changeColor(this)">
-    </div>
-    <div onclick="changeColor(this)" class="blue">
-    </div>
-    
-    <div onclick="changeColor(this)" id="d1">
-    </div>
-    
-    <div onclick="changeColor(this)" class="red">
-    </div>
-    <div onclick="changeColor(this)">
-    </div>
-    <div onclick="changeColor(this)" class="blue">
-    </div>
 </body>
 </html>
