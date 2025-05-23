@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hi()
+        {
+            let person1 = {id:101,name:"Raman",city:"Ahmedabad"}
+            let person2 = {id:102,name:"John",city:"Gandhinagar"}
+             console.log(`name of person1 is ${person1.name}`)
+             console.log(`name of person2 is ${person2.name}`)
+        }
+        function fun1()
+        {
+           let students = [
+             { id: 1, name: "Alice Johnson", contactNo: "123-456-7890" },
+             { id: 2, name: "Bob Smith", contactNo: "234-567-8901" },
+             { id: 3, name: "Charlie Lee", contactNo: "345-678-9012" },
+             { id: 4, name: "Diana Patel", contactNo: "456-789-0123" },
+             { id: 5, name: "Ethan Brown", contactNo: "567-890-1234" }
+];
+var ui = "";
+for(i=0;i<students.length;i++)
+{
+    ui+= `<tr><td>${students[i].id}</td><td>${students[i].name}</td><td>${students[i].contactNo}</td></tr>`
+}
+document.getElementById("tbdy").innerHTML=ui;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Click here"onclick="fun1()">
+    <table border="">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Contact No</th>
+            </tr>
+        </thead>
+        <tbody id="tbdy">
+            
+        </tbody>
+    </table>
+    
+</body>
+</html>
