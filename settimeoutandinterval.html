@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1()
+        {
+            let txtessay = document.getElementById("txtessay")
+            txtessay.removeAttribute("disabled")
+            console.log("this is line 1")
+            setTimeout(()=>
+                {
+                console.log("here some statement that will take some time ")   
+                alert("time up")
+                    txtessay.disabled = true
+            },10000)
+            console.log("this is last line")
+        }
+    </script>
+</head>
+<body>
+<h1>Write essay on Ahmedabad</h1>
+    <input type="button" value="Start " onclick="fun1()"/>
+    <br>
+    <textarea id="txtessay" disabled style="height:500px;width:500px">
+
+    </textarea>
+</body>
+</html>
